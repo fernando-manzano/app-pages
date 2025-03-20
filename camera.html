@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+        }
+        video {
+            width: 50%;
+            height: 50%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <video id="camera" playsinline autoplay></video>
+    <script>
+        async function startCamera() {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                document.getElementById('camera').srcObject = stream;
+            } catch (err) {
+                console.error("Error accessing camera: ", err);
+            }
+        }
+        startCamera();
+    </script>
+</body>
+</html>
