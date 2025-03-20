@@ -1,36 +1,127 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Page Title</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy</title>
     <style>
+        /* Global styles */
         body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
             margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: black;
+            padding: 0;
+            color: #e0e0e0;
         }
-        video {
-            width: 50%;
-            height: 50%;
-            object-fit: cover;
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #1e1e1e;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            color: #f5f5f5;
+            margin: 0;
+        }
+
+        .content h2 {
+            font-size: 1.6em;
+            margin-top: 20px;
+            color: #ffffff;
+        }
+
+        .content p,
+        .content ul {
+            font-size: 1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .content ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .content li {
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #757575;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        /* Links styling */
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
+
 <body>
-    <video id="camera" playsinline autoplay></video>
-    <script>
-        async function startCamera() {
-            try {
-                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-                document.getElementById('camera').srcObject = stream;
-            } catch (err) {
-                console.error("Error accessing camera: ", err);
-            }
-        }
-        startCamera();
-    </script>
+    <div class="container">
+        <header class="header">
+            <h1>Privacy Policy</h1>
+        </header>
+        <section class="content">
+            <p><strong>Effective Date:</strong> January 15, 2025</p>
+            <h2>1. Introduction</h2>
+            <p>At <strong>Fernando Manzano</strong>, we value your privacy and are committed to protecting your personal
+                information. This Privacy Policy outlines how we collect, use, and share your information when you use
+                our app or services.</p>
+            <h2>2. Information We Collect</h2>
+            <p>We do not collect any personal information from users. However, certain non-personal usage data may be
+                collected automatically, such as crash reports or anonymized analytics data, to improve the app's
+                functionality.</p>
+            <h2>3. Third-Party Services</h2>
+            <p>Our app integrates with FirebaseAnalytics and FirebaseCrashlytics. These services may collect and process
+                data in accordance with their own privacy policies. Please review their policies for more information.
+            </p>
+            <h2>4. User Consent</h2>
+            <p>By using our app, you agree to this Privacy Policy. Where applicable, we will obtain explicit consent for
+                any data collection, such as enabling optional features or third-party integrations.</p>
+            <h2>5. Data Retention and Deletion</h2>
+            <p>As we do not store personal data, there is no information to retain or delete. For non-personal data
+                collected by third-party services, please refer to their respective retention and deletion policies.</p>
+            <h2>6. User Rights</h2>
+            <p>As we do not store any personal data, there is no personal information to access, update, or delete. If
+                you have any concerns or questions, please contact us at <a
+                    href="mailto:fernando.manzano@ymail.com">fernando.manzano@ymail.com</a>.</p>
+            <h2>7. Children’s Privacy</h2>
+            <p>Our app is not intended for children under 13. If we discover we have collected information from a child
+                under 13, we will delete it promptly.</p>
+            <h2>8. Changes to This Privacy Policy</h2>
+            <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated
+                effective date.</p>
+            <h2>9. Contact Us</h2>
+            <p>If you have questions about this Privacy Policy, please contact us at: <br>Email: <a
+                    href="mailto:fernando.manzano@ymail.com">fernando.manzano@ymail.com</a> </p>
+        </section>
+        <footer class="footer">
+            <p>© 2025 Fernando Manzano. All Rights Reserved.</p>
+        </footer>
+    </div>
 </body>
+
 </html>
